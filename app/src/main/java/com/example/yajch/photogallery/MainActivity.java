@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
 {
+    // Image title and id arrays
     private final String image_titles[] = {"android1", "android2", "android3"};
     private final Integer image_IDs[] = {R.drawable.android1, R.drawable.android2, R.drawable.android3};
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Creates the recycler view used to create as many image views as needed
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.gallery);
         recyclerView.setHasFixedSize(true);
 
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setAdapter(adapter);
     }
 
+    // Function to put the images into the 'cells', the small image views
     private ArrayList<Cell> prepareData()
     {
         ArrayList<Cell> theImage = new ArrayList<>();
